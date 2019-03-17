@@ -1,0 +1,22 @@
+{
+  "name": "funcionarios",
+  "version": "1.0.0",
+  "description": "package para funcionarios",
+  "main": "funcionarios.js",
+  "scripts": {
+    "start": "nodemon",
+    "dev": "nodemon",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "teste",
+    "funcionarios",
+    "blablabla"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "axios": "^0.17.1"
+  }
+}
