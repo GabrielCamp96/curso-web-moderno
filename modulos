@@ -1,1 +1,4 @@
 axios -> requisições HTTP baseado em promises
+body-parser -> transforma o corpo da requisição em um objeto para ser tratado
+
+

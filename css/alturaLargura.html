@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Altura e Largura</title>
+    <style>
+        html {
+            height: 100%;
+        }
+
+        body {
+            height: 100%;
+            font-size: 40px;
+            background-color: coral;
+            margin: 0;
+        }
+
+        div {
+            background-color: seagreen;
+        }
+
+        span {
+            background-color: dodgerblue;
+        }
+
+        span,div {
+            width: 50%;
+            height: 200px;
+            height: 50%; /* sempre em relação a tag pai dela */
+            display: block;
+            /* display: inline-block; se colocar as tags ao lado fica na mesma linha */
+        }
+    </style>
+</head>
+
+<body>
+    <div>Título</div>
+    <span>Subtítulo</span>
+</body>
+
+</html>

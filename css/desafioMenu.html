@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Desafio Menu</title>
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <style>
+        body{
+            background: lightgrey;
+            margin: 0;
+            font-size: 20px;
+        }
+        header{
+            display: block;
+            padding: 8px;
+            background: rgb(40, 40, 40);
+            font-family: 'Oswald', sans-serif;
+            border-bottom: 3px solid rgb(111, 156, 172);
+            height: 50px;
+        }
+
+        .logo {
+            height: 50px;
+            width: 250px;
+            position: fixed;
+        }
+
+        .menu {
+            width: 70%;
+            height: 100%;
+            float: left;
+            overflow: hidden;
+        }
+        div a img {
+            height: 50px;
+            width: 250px;
+        }
+
+        .menu ul{
+            list-style: none;
+            display: inline-flex;
+            float: left;
+            margin: 0;
+            margin-left: 250px;
+            width: 100%;
+        }
+
+        .menu ul li {
+            padding: 10px;
+            height: 50px;
+        }
+
+        .menu-toggle {
+            display: none;
+        }
+
+        .menu ul li a {
+            text-decoration: none;
+            color: white;
+            text-align: center;
+        }
+
+        .menu ul li:hover{
+            background: rgb(111, 156, 172);
+        }
+
+        .active{
+            background: rgb(111, 156, 172);
+        }
+        .autenticacao{
+            height: 50px;
+            position: relative;
+            display: inline-flex;
+            float: right;
+        }
+
+        .autenticacao a{
+            margin-top: 5px;
+            text-decoration: none;
+            padding: 5px 20px;
+            color: white;        
+        }
+
+        .destaque {
+            background-color: rgb(184, 24, 24);
+            border-radius: 20px;
+        }
+
+        @media (max-width:1000px) {
+            .autenticacao { display:none; }
+        }
+
+        @media (max-width: 800px) {
+            .menu { display: none; }
+            .menu-toggle { 
+                display: block; 
+            }
+        }
+
+        .menu-toggle{
+            background : rgb(60, 60, 60); 
+            color: rgb(199, 199, 199);
+            border-radius: 10px;
+            margin-top: 5px;
+            padding: 10px 20px;
+            border: none;
+            float: right;
+        } */
+
+    </style>
+    
+</head>
+
+<body>
+    <header class="cabecalho">
+        <div class="logo">
+            <a href="#inicio">
+                <img src="http://files.cod3r.com.br/curso-web/logo.png" />
+            </a>
+        </div>
+        <button class="menu-toggle">
+            <i class="fa fa-lg fa-bars"></i>
+        </button>
+        <nav class="menu">
+            <ul>
+                <li id="inicio">
+                    <a href="#inicio">Início</a>
+                </li>
+                <li id="cursos">
+                    <a href="#cursos">Cursos</a>
+                </li>
+                <li id="sobre">
+                    <a href="#sobre">Sobre</a>
+                </li>
+                <li id="contato">
+                    <a href="#contato">Contato</a>
+                </li>
+            </ul>
+        </nav>
+        <aside class="autenticacao">
+            <a href="#login">Login</a>
+            <a href="#registrar" class="botao destaque">Registrar</a>
+        </aside>
+        </header>
+
+    <script>
+        const endereco = {
+            hash: window.location.hash.substring(1)
+        }
+        setInterval(() => {
+            newHash = window.location.hash.substring(1)
+                if(endereco.hash != newHash) {
+                    if (endereco.hash != "") {
+                        old = document.getElementById(endereco.hash)
+                        old.className = old.className.replace("active","")
+                    } 
+                    elemento = document.getElementById(newHash)
+                    elemento.className += "active";
+                }
+                endereco.hash = newHash
+            }, 100)
+            
+            // Implementação Cod3r
+            // window.onhashchange = function (e) {
+            //     const oldURL = e.oldURL.split('#')[1]
+            //     const newURL = e.newURL.split('#')[1]
+            //     const oldMenu = document.querySelector(`.menu a[href='#${oldURL}']`)
+            //     const newMenu = document.querySelector(`.menu a[href='#${newURL}']`)
+            //     oldMenu && oldMenu.classList.remove('active')
+            //     newMenu && newMenu.classList.add('selected')
+            // }
+    </script>
+</body>
+
+</html>
