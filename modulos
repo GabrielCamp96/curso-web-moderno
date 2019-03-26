@@ -1,4 +1,7 @@
 axios -> requisições HTTP baseado em promises
 body-parser -> transforma o corpo da requisição em um objeto para ser tratado
-
-
+http-server -> serve a aplicação em um localhost
+browser-sync -> serve a aplicação em localhost, porém com opção em mobile e compartilhamento de eventos
+express -> framework para servidor, fazer rotas etc
+multer -> para fazer upload ajax
+nodemon -> monitora os arquivos para atualizar aplicação a cada vez que um arquivo é salvo
