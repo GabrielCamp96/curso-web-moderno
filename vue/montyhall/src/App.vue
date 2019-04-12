@@ -3,7 +3,7 @@
     <h1>Problema de Monty Hall</h1>
     <div class="form">
       <div v-if="!started">
-        <label for="portsAmount">Quantas portas?</label>
+        <label for="portsAmount">Quantas portas? (min {{ portsAmount }})</label>
         <input type="text" id="portsAmount" size="3" v-model.number="portsAmount">
         <!-- converte o binding para numérico -->
       </div>
